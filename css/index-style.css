@@ -48,7 +48,7 @@ section {
 /* ============================================>>>>> Start Navbar <<<<================================================= */
 
 header .navbar {
-    height: 90px !important;
+    height: 130px !important;
     z-index: 1000 !important;
 }
 
@@ -82,15 +82,18 @@ header .nav-link.active {
 
 @media (max-width: 991px) {
     header nav.navbar .navbar-collapse {
-        top: 100% !important;
-        left: 0px !important;
-        width: 100% !important;
+        position: absolute;
+        top: 130px !important;
+        left: 1% !important;
+        width: 98% !important;
         background-color: rgba(0, 0, 0, 0.5) !important;
+        box-shadow: 0px 3px 5px var(--main-color);
         backdrop-filter: blur(8px);
     }
 
     header nav ul.navbar-nav li.nav-item:hover a.nav-link {
         color: var(--main-color) !important;
+        border-bottom: 1px solid var(--main-color) !important;
         border-color: transparent;
         letter-spacing: 2px !important;
     }
