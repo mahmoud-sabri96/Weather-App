@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,200&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome  -->
+    <link rel="stylesheet" href="fontawesome/all.min.css">
+    <!-- BootStarp -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="icons-1.9.1/font/bootstrap-icons.css">
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="css/index-style.css">
+    <link rel="icon" href="imgs/logo.png">
+    <!-- MediaQuery -->
+    <link rel="stylesheet" href="MediaQueris/mediaQuery.css">
+    <title>Weather App Route</title>
+</head>
+
+<body>
+    <!-- ============================================== Start Navbar ============================================ -->
+    <header>
+        <nav class="navbar  navbar-expand-lg bg-dark ">
+            <div class="container">
+                <a class="navbar-brand d-flex" href="#">
+                    <img src="imgs/logo.png" alt="Bootstrap" width="64" height="38">
+                    <div class="logo ms-2">
+                        <p class="title m-0 text-white d-flex flex-column">Weather
+                            <span class="m-0 text-white-50">tagline goes here</span>
+                        </p>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars text-white"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item py-2 px-2">
+                            <a class="nav-link px-4 py-1 text-white active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item py-2">
+                            <a class="nav-link ms-2 px-4 py-1 text-white" href="#">News</a>
+                        </li>
+                        <li class="nav-item py-2">
+                            <a class="nav-link ms-2 px-4 py-1 text-white" href="#">Live cameras</a>
+                        </li>
+                        <li class="nav-item py-2">
+                            <a class="nav-link ms-2 px-4 py-1 text-white" href="#">Photo</a>
+                        </li>
+                        <li class="nav-item py-2">
+                            <a class="nav-link ms-2 px-4 py-1 text-white" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- ============================================== Start home ============================================ -->
+    <section class="home" id="home">
+        <div class="container">
+            <form class="position-relative mx-auto">
+                <input type="text" id="search" class="form-control text-white mx-auto rounded-5 mb-5"
+                    placeholder="Find your location">
+                    <input type="submit" id="submit" value="Find" class="position-absolute text-white rounded-5">
+            </form>
+                <div class="row mx-auto">
+    <!-- ======== The Current day Column ======== -->
+                    <div class="current-day col-lg-4 px-0 text-white">
+                        <div class="forecast-body  ">
+                            <div class="forecast-head d-flex justify-content-between p-2">
+                                <span class="day">Tuesday</span>
+                                <span class="date">11 October</span>
+                            </div>
+                            <div class="forecast-content px-3 py-4">
+                                <p class="location">Nasr City</p>
+                                <h2 class="temperature my-4 h1">24.7<sup>o</sup>C</h2>
+                                <img src="imgs/113.png" alt="" class="status-icon">
+                                <p class="status-title mb-4">sunny</p>
+                                <span class="rain">
+                                    <img src="imgs/icon-umberella.png" alt="Weather">
+                                    <small class="percentage">20%</small>
+                                </span>
+                                <span class="wind ms-3">
+                                    <img src="imgs/icon-wind.png" alt="Weather">
+                                    <small class="wind-speed">30%</small>
+                                </span>
+                                <span class="direction ms-3">
+                                    <img src="imgs/icon-compass.png" alt="Weather">
+                                    <small class="compass">20%</small>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+        <!-- ======== The Tomorrow day Column ======== -->
+                    <div class="tomorrow col-lg-4 px-0 text-white ">
+                        <div class="forecast-body">
+                            <div class="forecast-head p-2 text-center">
+                                <span class="day ">Tuesday</span>
+                            </div>
+                            <div class="forecast-content px-3 py-4 d-flex flex-column align-items-center">
+                                <img src="imgs/icon-umberella.png" alt="Weather" class="status-icon">
+                                <h2 class="max-temperature mt-4 h4">24.7<sup>o</sup>C</h2>
+                                <small class="min-temperature mb-4">24.7<sup>o</sup>C</small>
+                                <div class="status-title">sunny</div>
+                            </div>
+                        </div>
+                    </div>
+            <!-- ======== The After-Tomorrow day Column ======== -->
+                    <div class="after-tomorrow col-lg-4 px-0 text-white">
+                        <div class="forecast-body ">
+                            <div class="forecast-head p-2 text-center">
+                                <span class="day">wen</span>
+                            </div>
+                            <div class="forecast-content px-3 py-4 d-flex flex-column align-items-center">
+                                <img src="imgs/icon-umberella.png" alt="Weather" class="status-icon">
+                                <h2 class="max-temperature mt-4 h4">24.7<sup>o</sup>C</h2>
+                                <small class='min-temperature mb-4'>24.7<sup>o</sup>C</small>
+                                <div class="status-title">sunny</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- ============================================== Start Footer ============================================ -->
+
+<footer>
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-9">
+                <form class="position-relative mx-auto">
+                    <input type="text" id="email" class="form-control text-white mx-auto rounded-5"
+                        placeholder="Enter your email to subscribe">
+                        <input type="submit" id="subscribe" value="Subscribe" class="position-absolute text-white rounded-5">
+                </form>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-4 mt-2 mx-auto ">
+                <div class="social text-white d-flex  justify-content-between ">
+                    <a class="facebook d-flex justify-content-center align-items-center rounded-circle" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a class="twitter d-flex justify-content-center align-items-center rounded-circle" href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a class="gmail d-flex justify-content-center align-items-center rounded-circle" href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a class="gmail d-flex justify-content-center align-items-center rounded-circle" href="#"><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row text-muted">
+            <p class="copy-right mt-3">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+    <!-- FontAwesome -->
+    <script src="fontawesome/all.min.js"></script>
+    <!-- BootStrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- mine.js-->
+    <script src="js/mine.js"></script>
+</body>
+
+</html>
