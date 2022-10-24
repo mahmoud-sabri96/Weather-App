@@ -33,13 +33,18 @@ fetchingData();
 //@@@@@@@@@@@@@@>>> Inplementaion of The Function Which fetching data <<<@@@@@@@@@@@@
 
 function fetchingData(location = "nasr city") {
-    fetch(`https://api.weatherapi.com/v1/forecast.json?key=dea6f358a0bc4d83b11200332220910&q=${location}&days=3`)
-        .then(res => res.json())
-        .then(data => {
-            // console.log(data);
-            displayWeather(data);
-        });
+    // fetch(`https://api.weatherapi.com/v1/forecast.json?key=dea6f358a0bc4d83b11200332220910&q=${location}&days=3`)
+    // fetch(`https://api.weatherapi.com/v1/forecast.json?key=beaa6830775a4e99910131438220406&q=${location}&days=3`)
+    fetch(`http://api.weatherapi.com/v1/forecast.json?key=17eb3056fb8c4efd98c54331222410&q=${location}&days=3`, { mode: 'no-cors'})
+    // fetch(`http://api.weatherapi.com/v1/forecast.json?key=17eb3056fb8c4efd98c54331222410&q=london&days=3`, { mode: 'no-cors'})
+        .then(response => response.json())
+        .then(data => displayWeather(data))
+            // console.log(data);   
+        .catch(error => console.log(error))
 };
+
+
+
 
 //@@@@@@@@@@@@@>>> Inplementaion of The Function Which display forecast data in DOM <<<@@@@@@@@@@@@
 
@@ -90,7 +95,7 @@ function displayWeather(data) {
 
 
 //@@@@@@@@@@@@@@@@@>>> Inplementaion of The Function Which getting search location to fetch data <<<@@@@@@@@@@@@
-function getData(event) {
+function getData(event) { //einfo
     event.preventDefault();
     let searchValue = event.target.value;
     if (searchValue.length >= 3) {
