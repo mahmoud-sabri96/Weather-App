@@ -32,18 +32,15 @@ fetchingData();
 
 //@@@@@@@@@@@@@@>>> Inplementaion of The Function Which fetching data <<<@@@@@@@@@@@@
 
-function fetchingData(location = "nasr city") {
-    // fetch(`https://api.weatherapi.com/v1/forecast.json?key=dea6f358a0bc4d83b11200332220910&q=${location}&days=3`)
-    // fetch(`https://api.weatherapi.com/v1/forecast.json?key=beaa6830775a4e99910131438220406&q=${location}&days=3`)
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=17eb3056fb8c4efd98c54331222410&q=${location}&days=3`, { mode: 'no-cors'})
-    // fetch(`http://api.weatherapi.com/v1/forecast.json?key=17eb3056fb8c4efd98c54331222410&q=london&days=3`, { mode: 'no-cors'})
-        .then(response => response.json())
-        .then(data => displayWeather(data))
-            // console.log(data);   
-        .catch(error => console.log(error))
-};
-
-
+async function fetchingData(location = "cairo") {
+    try {
+        let response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=beaa6830775a4e99910131438220406&q=${location}07112&days=3`)
+        let data = await response.json();
+        displayWeather(data)
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 
 //@@@@@@@@@@@@@>>> Inplementaion of The Function Which display forecast data in DOM <<<@@@@@@@@@@@@
@@ -142,4 +139,4 @@ function getData(event) { //einfo
 
 // // console.log(today.toLocaleDateString("en-US")); // 9/17/2016
 // console.log(today.toLocaleDateString("en-US", options)); // Saturday, September 17, 2016
-// // console.log(today.toLocaleDateString("hi-IN", options));
+// // console.log(today.toLocaleDateString("hi-IN", options))
